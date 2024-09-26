@@ -21,7 +21,7 @@ Clone the repository:
 
 bash
 Copiar código
-git clone https://github.com/yourusername/MDBRepairTool.git
+git clone https://github.com/pereirart0207/MDBRepairTool.git
 Open the solution in SharpDevelop or Visual Studio.
 
 Ensure that you have the required Microsoft Office Interop libraries installed. You can add these via NuGet or by referencing the correct assemblies in your project.
