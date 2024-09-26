@@ -1,0 +1,7 @@
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csprojResolveAssemblyReference.cache
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.MainForm.resources
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csproj.GenerateResource.Cache
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.exe
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.pdb
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.exe
+C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.pdb
