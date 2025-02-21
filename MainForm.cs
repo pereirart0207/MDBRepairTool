@@ -94,6 +94,14 @@ namespace MDBRepairTool
 
             picProc.Visible = false;
         }
+        public static string[] GetMDBFiles(string selectedPath)
+        {
+            if (Directory.Exists(selectedPath))
+            {
+                return Directory.GetFiles(Path.GetFullPath(selectedPath), "*.mdb", SearchOption.TopDirectoryOnly);
+            }
+            return new string[0];
+        }
 
         void BtnSelectFileClick(object sender, EventArgs e)
         {
@@ -125,6 +133,74 @@ namespace MDBRepairTool
                 picOk.Visible = false;
                 picErr.Visible = true;
             }
+        }
+
+        private async void btnFolder_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedPath = folderBrowserDialog.SelectedPath;
+                string[] mdbFiles = GetMDBFiles(selectedPath);
+
+                if (mdbFiles.Length < 1)
+                {
+                    txtResult.Text = "No hay archivos en la carpeta especificada.\n";
+                    return;
+                }
+
+                progressBar1.Value = 0;
+                progressBar1.Maximum = mdbFiles.Length;
+
+                int i = 0;
+
+                foreach (string mdbFile in mdbFiles)
+                {
+                    this.Invoke((Action)(() =>
+                    {
+                        lblCurrentFile.Text = Path.GetFileName(mdbFile);
+                        picProc.Visible = true;
+                    }));
+
+                    await Task.Run(() =>
+                    {
+                        try
+                        {
+                            RepairMDB(mdbFile);
+                            this.Invoke((Action)(() =>
+                            {
+                                SetImage(true);
+                                txtResult.Text = $"Archivo {Path.GetFileName(mdbFile)} reparado exitosamente.\n";
+                            }));
+                        }
+                        catch (Exception ex)
+                        {
+                            this.Invoke((Action)(() =>
+                            {
+                                SetImage(false);
+                                txtResult.Text = $"Error al intentar reparar {Path.GetFileName(mdbFile)}:\n{ex.Message}\n";
+                            }));
+                        }
+                    });
+
+                    i++; // Incrementamos después de procesar el archivo
+
+                    this.Invoke((Action)(() =>
+                    {
+                        progressBar1.Value = i; // Usamos `i` directamente ya que `Maximum = mdbFiles.Length`
+                    }));
+                }
+
+                this.Invoke((Action)(() =>
+                {
+                    picProc.Visible = false;
+                    txtResult.Text = "Proceso finalizado.\n";
+                }));
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -5,3 +5,16 @@ C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\bin\D
 C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.pdb
 C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.exe
 C:\Users\FRANK\Documents\SharpDevelop Projects\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.pdb
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csproj.AssemblyReference.cache
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.MainForm.resources
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csproj.GenerateResource.cache
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csproj.CoreCompileInputs.cache
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.exe
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.pdb
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.exe.config
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.exe
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\bin\Debug\MDBRepairTool.pdb
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\bin\Debug\ADODB.dll
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\bin\Debug\stdole.dll
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.csproj.CopyComplete
+C:\Users\FRANK\Desktop\MDBRepairTool\MDBRepairTool\obj\Debug\MDBRepairTool.Properties.Resources.resources

@@ -36,115 +36,151 @@ namespace MDBRepairTool
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.txtFilePath = new System.Windows.Forms.TextBox();
-			this.btnRepair = new System.Windows.Forms.Button();
-			this.btnSelectFile = new System.Windows.Forms.Button();
-			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-			this.txtResult = new System.Windows.Forms.Label();
-			this.picOk = new System.Windows.Forms.PictureBox();
-			this.picErr = new System.Windows.Forms.PictureBox();
-			this.picProc = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)(this.picOk)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picErr)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.picProc)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// txtFilePath
-			// 
-			this.txtFilePath.Enabled = false;
-			this.txtFilePath.Location = new System.Drawing.Point(12, 21);
-			this.txtFilePath.Multiline = true;
-			this.txtFilePath.Name = "txtFilePath";
-			this.txtFilePath.Size = new System.Drawing.Size(194, 34);
-			this.txtFilePath.TabIndex = 0;
-			// 
-			// btnRepair
-			// 
-			this.btnRepair.Location = new System.Drawing.Point(12, 107);
-			this.btnRepair.Name = "btnRepair";
-			this.btnRepair.Size = new System.Drawing.Size(233, 32);
-			this.btnRepair.TabIndex = 2;
-			this.btnRepair.Text = "REPAIR";
-			this.btnRepair.UseVisualStyleBackColor = true;
-			this.btnRepair.Click += new System.EventHandler(this.BtnRepairClick);
-			// 
-			// btnSelectFile
-			// 
-			this.btnSelectFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectFile.Image")));
-			this.btnSelectFile.Location = new System.Drawing.Point(212, 21);
-			this.btnSelectFile.Name = "btnSelectFile";
-			this.btnSelectFile.Size = new System.Drawing.Size(33, 34);
-			this.btnSelectFile.TabIndex = 3;
-			this.btnSelectFile.UseVisualStyleBackColor = true;
-			this.btnSelectFile.Click += new System.EventHandler(this.BtnSelectFileClick);
-			// 
-			// openFileDialog
-			// 
-			this.openFileDialog.FileName = "openFileDialog1";
-			// 
-			// txtResult
-			// 
-			this.txtResult.Location = new System.Drawing.Point(38, 77);
-			this.txtResult.Name = "txtResult";
-			this.txtResult.Size = new System.Drawing.Size(206, 20);
-			this.txtResult.TabIndex = 4;
-			this.txtResult.Text = "Procesando...";
-			this.txtResult.Visible = false;
-			// 
-			// picOk
-			// 
-			this.picOk.Image = ((System.Drawing.Image)(resources.GetObject("picOk.Image")));
-			this.picOk.Location = new System.Drawing.Point(12, 73);
-			this.picOk.Name = "picOk";
-			this.picOk.Size = new System.Drawing.Size(20, 20);
-			this.picOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.picOk.TabIndex = 5;
-			this.picOk.TabStop = false;
-			this.picOk.Visible = false;
-			// 
-			// picErr
-			// 
-			this.picErr.Image = ((System.Drawing.Image)(resources.GetObject("picErr.Image")));
-			this.picErr.Location = new System.Drawing.Point(12, 73);
-			this.picErr.Name = "picErr";
-			this.picErr.Size = new System.Drawing.Size(20, 20);
-			this.picErr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.picErr.TabIndex = 6;
-			this.picErr.TabStop = false;
-			this.picErr.Visible = false;
-			// 
-			// picProc
-			// 
-			this.picProc.Image = ((System.Drawing.Image)(resources.GetObject("picProc.Image")));
-			this.picProc.Location = new System.Drawing.Point(12, 73);
-			this.picProc.Name = "picProc";
-			this.picProc.Size = new System.Drawing.Size(20, 20);
-			this.picProc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.picProc.TabIndex = 7;
-			this.picProc.TabStop = false;
-			this.picProc.Visible = false;
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(256, 162);
-			this.Controls.Add(this.picProc);
-			this.Controls.Add(this.picErr);
-			this.Controls.Add(this.picOk);
-			this.Controls.Add(this.txtResult);
-			this.Controls.Add(this.btnSelectFile);
-			this.Controls.Add(this.btnRepair);
-			this.Controls.Add(this.txtFilePath);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "MainForm";
-			this.Text = "MDBRepairTool";
-			((System.ComponentModel.ISupportInitialize)(this.picOk)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picErr)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.picProc)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.btnRepair = new System.Windows.Forms.Button();
+            this.btnSelectFile = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.txtResult = new System.Windows.Forms.Label();
+            this.picOk = new System.Windows.Forms.PictureBox();
+            this.picErr = new System.Windows.Forms.PictureBox();
+            this.picProc = new System.Windows.Forms.PictureBox();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnFolder = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblCurrentFile = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picOk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProc)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Enabled = false;
+            this.txtFilePath.Location = new System.Drawing.Point(12, 18);
+            this.txtFilePath.Multiline = true;
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(194, 40);
+            this.txtFilePath.TabIndex = 0;
+            // 
+            // btnRepair
+            // 
+            this.btnRepair.Location = new System.Drawing.Point(12, 178);
+            this.btnRepair.Name = "btnRepair";
+            this.btnRepair.Size = new System.Drawing.Size(233, 32);
+            this.btnRepair.TabIndex = 2;
+            this.btnRepair.Text = "REPAIR";
+            this.btnRepair.UseVisualStyleBackColor = true;
+            this.btnRepair.Click += new System.EventHandler(this.BtnRepairClick);
+            // 
+            // btnSelectFile
+            // 
+            this.btnSelectFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectFile.Image")));
+            this.btnSelectFile.Location = new System.Drawing.Point(207, 18);
+            this.btnSelectFile.Name = "btnSelectFile";
+            this.btnSelectFile.Size = new System.Drawing.Size(38, 40);
+            this.btnSelectFile.TabIndex = 3;
+            this.btnSelectFile.UseVisualStyleBackColor = true;
+            this.btnSelectFile.Click += new System.EventHandler(this.BtnSelectFileClick);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
+            // 
+            // txtResult
+            // 
+            this.txtResult.Location = new System.Drawing.Point(39, 155);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(206, 20);
+            this.txtResult.TabIndex = 4;
+            this.txtResult.Text = "Procesando...";
+            this.txtResult.Visible = false;
+            // 
+            // picOk
+            // 
+            this.picOk.Image = ((System.Drawing.Image)(resources.GetObject("picOk.Image")));
+            this.picOk.Location = new System.Drawing.Point(13, 151);
+            this.picOk.Name = "picOk";
+            this.picOk.Size = new System.Drawing.Size(20, 20);
+            this.picOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picOk.TabIndex = 5;
+            this.picOk.TabStop = false;
+            this.picOk.Visible = false;
+            // 
+            // picErr
+            // 
+            this.picErr.Image = ((System.Drawing.Image)(resources.GetObject("picErr.Image")));
+            this.picErr.Location = new System.Drawing.Point(13, 151);
+            this.picErr.Name = "picErr";
+            this.picErr.Size = new System.Drawing.Size(20, 20);
+            this.picErr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picErr.TabIndex = 6;
+            this.picErr.TabStop = false;
+            this.picErr.Visible = false;
+            // 
+            // picProc
+            // 
+            this.picProc.Image = ((System.Drawing.Image)(resources.GetObject("picProc.Image")));
+            this.picProc.Location = new System.Drawing.Point(13, 151);
+            this.picProc.Name = "picProc";
+            this.picProc.Size = new System.Drawing.Size(20, 20);
+            this.picProc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProc.TabIndex = 7;
+            this.picProc.TabStop = false;
+            this.picProc.Visible = false;
+            // 
+            // btnFolder
+            // 
+            this.btnFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnFolder.Image")));
+            this.btnFolder.Location = new System.Drawing.Point(207, 70);
+            this.btnFolder.Name = "btnFolder";
+            this.btnFolder.Size = new System.Drawing.Size(38, 40);
+            this.btnFolder.TabIndex = 9;
+            this.btnFolder.UseVisualStyleBackColor = true;
+            this.btnFolder.Click += new System.EventHandler(this.btnFolder_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(13, 70);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(193, 40);
+            this.progressBar1.TabIndex = 10;
+            // 
+            // lblCurrentFile
+            // 
+            this.lblCurrentFile.AutoSize = true;
+            this.lblCurrentFile.Location = new System.Drawing.Point(16, 113);
+            this.lblCurrentFile.Name = "lblCurrentFile";
+            this.lblCurrentFile.Size = new System.Drawing.Size(0, 13);
+            this.lblCurrentFile.TabIndex = 11;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(262, 222);
+            this.Controls.Add(this.lblCurrentFile);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.btnFolder);
+            this.Controls.Add(this.picProc);
+            this.Controls.Add(this.picErr);
+            this.Controls.Add(this.picOk);
+            this.Controls.Add(this.txtResult);
+            this.Controls.Add(this.btnSelectFile);
+            this.Controls.Add(this.btnRepair);
+            this.Controls.Add(this.txtFilePath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "MDBRepairTool";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picOk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picErr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProc)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 		private System.Windows.Forms.PictureBox picProc;
 		private System.Windows.Forms.PictureBox picErr;
@@ -154,5 +190,9 @@ namespace MDBRepairTool
 		private System.Windows.Forms.Button btnSelectFile;
 		private System.Windows.Forms.Button btnRepair;
 		private System.Windows.Forms.TextBox txtFilePath;
-	}
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.Button btnFolder;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblCurrentFile;
+    }
 }
